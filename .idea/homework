@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class Scratch {
+    //i want to add comment
     public static void main(String[] args) {
         ArrayList<Integer> xList = new ArrayList();
         xList.add(1);
@@ -10,9 +12,11 @@ class Scratch {
         int resultMax = maxNum(xList);
         int resultMin = minNum(xList);
         int resultAv = avNum(xList);
+        int resultFak = faktorial();
         System.out.println(resultMax);
         System.out.println(resultMin);
         System.out.println(resultAv);
+        System.out.println(resultFak);
 
     }
 
@@ -45,5 +49,17 @@ class Scratch {
         }
 
         return a/2;
+    }
+    public static int faktorial (){
+        Scanner fakto = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int fak= fakto.nextInt();
+        int faktoryel=1;
+        for(int i=1; i<=fak;i++){
+
+            faktoryel = faktoryel*i;
+
+        }
+        return faktoryel;
     }
 }
