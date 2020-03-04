@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+class Scratch {
+    public static void main(String[] args) {
+        ArrayList<Integer> xList = new ArrayList();
+        xList.add(1);
+        xList.add(13);
+        xList.add(26);
+        xList.add(72);
+        int resultMax = maxNum(xList);
+        int resultMin = minNum(xList);
+        int resultAv = avNum(xList);
+        System.out.println(resultMax);
+        System.out.println(resultMin);
+        System.out.println(resultAv);
+
+    }
+
+    private static int minNum(ArrayList<Integer> xList) {
+        int a =9999;
+        for (int i = 0 ; i<xList.size(); i++){
+            if( a > xList.get(i)){
+                a = xList.get(i);
+            }
+
+        }
+        return a;
+    }
+
+    private static int maxNum(ArrayList<Integer> xList) {
+        int a =0;
+        for (int i = 0 ; i<xList.size(); i++){
+            if( a < xList.get(i)){
+                a = xList.get(i);
+            }
+
+        }
+        return a;
+    }
+    private static int avNum(ArrayList<Integer> xList){
+        int a=0;
+        for (int i = 0 ; i<xList.size();i++){
+
+            a += xList.get(i);
+        }
+
+        return a/2;
+    }
+}
